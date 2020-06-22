@@ -22,12 +22,12 @@ grad = zeros(size(theta));
 
 z = X * theta;
 h_theta = sigmoid(z);
-term1 = -y' * log(h_theta)
-term2 = -(1.-y') * log(1 - h_theta)
+term1 = y' * log(h_theta);
+term2 = (1 - y)' * log(1 - h_theta);
 
-J = (term1 + term2) / m
+J = -(term1 + term2) / m;
 
-grad = (X * (sigmoid(z) - y)) ./ m
+grad = (X' * (sigmoid(z) - y)) ./ m;
 
 % =============================================================
 
