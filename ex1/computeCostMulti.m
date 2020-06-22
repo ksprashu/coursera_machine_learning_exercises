@@ -17,7 +17,7 @@ h = X * theta;
 diff = h - y;
 sse = sum(diff .^ 2);
 
-J = 1 / (2 * m) * sse
+J = 1 / (2 * m) * sse;
 
 
 
